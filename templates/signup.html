@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="uk-container-small uk-margin-auto">
+    <h2>Sign Up</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="inputemail">Email
+            <input type="email" name="email" id="inputemail" class="uk-input" placeholder="Email adress" required autofocus>
+        </label>
+        <label for="password">Password
+            <input type="password" name="password" id="inputpassword" class="uk-input" placeholder="Password" required>
+        </label>
+        <button type="submit" class="uk-button uk-button-primary uk-button-large">Sign in</button>
+    </form>
+</div>
+{% endblock content %}
